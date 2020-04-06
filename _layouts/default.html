@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "pt-br" }}">
+
+  {%- include head.html -%}
+
+  <body>
+    
+  	<div class="container">
+    	<header class="mosthead">
+    		<h1>
+    			<a href="/">{{ site.title }}<span> Blog</span></a>
+    		</h1>
+        <nav class="mosthead-nav">
+          {% for page in site.pages %}
+            <a href="{{ page.url}}">{{page.title}}</a>
+          {% endfor %}
+        </nav>
+        
+    	</header><!-- /header -->
+    {{ content }}
+
+    </div>
+  </body>
+
+</html>
